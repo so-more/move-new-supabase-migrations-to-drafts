@@ -1,8 +1,17 @@
 {
     "name": "move-new-supabase-migrations-to-drafts",
+    "displayName": "Move new Supabase migrations to drafts",
     "version": "0.0.1",
-    "description": "Migrations are timestamped, so if you switch tasks, delete any empty or in-progress migrations to avoid issues. This script moves new migration files to the drafts folder so you can work on them later without disrupting the timestamp sequence. When ready, move the drafts back to the migrations folder to apply them.",
-    "publisher": "so more ltd",
+    "description": "Migrations are timestamped, so if you switch tasks, delete any empty or in-progress migrations to avoid issues. This extension moves new migration files to the drafts folder so you can work on them later without disrupting the timestamp sequence. When ready, move the drafts back to the migrations folder to apply them.",
+    "publisher": "so more",
+    "license": "MIT",
+    "icon": "icon.png",
+    "readme": "README.md",
+    "homepage": "www.somore.co.uk",
+    "author": {
+        "name": "Nick McVroom",
+        "url": "https://www.somore.co.uk"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/so-more/move-new-supabase-migrations-to-drafts.git"
