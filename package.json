@@ -1,0 +1,29 @@
+{
+    "name": "move-new-supabase-migrations-to-drafts",
+    "version": "0.0.1",
+    "description": "Migrations are timestamped, so if you switch tasks, delete any empty or in-progress migrations to avoid issues. This script moves new migration files to the drafts folder so you can work on them later without disrupting the timestamp sequence. When ready, move the drafts back to the migrations folder to apply them.",
+    "publisher": "so more ltd",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/so-more/move-new-supabase-migrations-to-drafts.git"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onFileSystem:created"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "move-new-supabase-migrations-to-drafts.execute",
+                "title": "Move new .sql files created by the `supabase migrations new` command in `supabase/migrations` to `supabase/migration_drafts` folder.",
+                "category": "Other"
+            }
+        ]
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "main": "./execute.js"
+}
