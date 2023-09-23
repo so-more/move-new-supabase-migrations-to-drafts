@@ -1,0 +1,22 @@
+name: Package Visual Studio Code Extension
+
+on:
+  push:
+    - main
+
+jobs:
+  package-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install -g @vscode/vsce 
+      - run: vsce package
+      - name: release on Github releases
+        uses: fnkr/github-action-ghr@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GHR_PATH: ./*.vsix
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
